@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#video-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+video{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+}
+
+.main_left{
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_right{
+    flex: 0.2;
+}
+
+.main_video{
+    flex-grow: 1;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_controls{
+    display: flex;
+    background-color: #1c1e20;
+    color: #d2d2d2;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #3d3d42;
+}
+
+.main_controls_block{
+    display: flex;
+}
+
+.main_controls_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 80px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+}
+
+.main_controls_button i {
+    font-size: 18px;
+    padding-bottom: 3px;
+}
+
+.leave_meeting{
+    color: #eb534e;
+}
+
+
+.main_controls_button:hover{
+    background-color: #343434;
+    border-radius: 5px;
+}
+
+.main_controls_button span{
+    font-size: 14px;
+}
+
+.main_right{
+    display: flex;
+    flex-direction: column;
+    background-color: #242324;
+    border-left: 1px solid #3d3d42;
+}
+
+.main_header{
+    display: flex;
+    color: #f5f5f5;
+    text-align: left;
+    align-items: center;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.main_header h1{
+    font-size: 20px;
+}
+
+.main_chat_window{
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.main_chat_window::-webkit-scrollbar{
+    width: 10px;
+}
+
+.main_chat_window::-webkit-scrollbar-thumb{
+    background: rgb(20, 20, 20);
+    transition: 0.3s all ease-in-out;
+    border-radius: 100vw;
+}
+
+.main_chat_window::-webkit-scrollbar-thumb:hover{
+    background: rgb(31, 31, 31);
+}
+
+.main_chat_window::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.main_message_container{
+    height: 70px;
+    border-top: 1px solid #3d3d42;
+    padding: 22px 12px;
+    display: flex;
+}
+
+.main_message_container input{
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #f5f5f5;
+}
+
+.messages{
+    color: white;
+    list-style: none;
+}
+
+.messages li{
+    padding: 5px 10px;
+}
+
+.unmute, .stop{
+    color: #cc3b33;
+}
