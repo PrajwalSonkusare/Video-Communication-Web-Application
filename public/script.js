@@ -26,9 +26,6 @@ navigator.mediaDevices.getUserMedia({
         call.on('stream', userVideoStream => {
             addVideoStream(video, userVideoStream)
         })
-        call.on('close', () => {
-            video.remove()
-        })
     })
 
     socket.on('user-connected', userId => {
@@ -56,6 +53,7 @@ navigator.mediaDevices.getUserMedia({
 socket.on('user-disconnected', userId => {
     if (peers[userId]) peers[userId].close()
 })
+
 
 myPeer.on('open', id => {
     socket.emit('join-room', ROOM_ID, id)
