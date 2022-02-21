@@ -30,7 +30,7 @@ navigator.mediaDevices.getUserMedia({
 
     socket.on('user-connected', userId => {
         setTimeout(connectToNewUser,3000,userId,stream);
-        connectToNewUser(userId, stream)
+        // connectToNewUser(userId, stream)
     })
 
     let text = $('input')
