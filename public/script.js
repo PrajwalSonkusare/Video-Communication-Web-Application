@@ -86,6 +86,10 @@ const scrollToBottom = () => {
     d.scrollTop(d.prop("scrollHeight"));
  }
 
+const scrollMainVideo = () => {
+    let e = $('.main_video');
+    e.scrollTop(e.prop("scrollHeight"));
+}
 
  // Mute our video
 const muteUnmute = () => { 
