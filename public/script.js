@@ -3,7 +3,7 @@ const videoGrid = document.getElementById('video-grid');
 const myPeer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: '3000'
+    port: '443'
 })
 
 
@@ -30,7 +30,7 @@ navigator.mediaDevices.getUserMedia({
 
     socket.on('user-connected', userId => {
         setTimeout(connectToNewUser,3000,userId,stream);
-        connectToNewUser(userId, stream)
+        // connectToNewUser(userId, stream)
     })
 
     let text = $('input')
@@ -85,6 +85,10 @@ const scrollToBottom = () => {
     d.scrollTop(d.prop("scrollHeight"));
  }
 
+const scrollMainVideo = () => {
+    let e = $('.main_video');
+    e.scrollTop(e.prop("scrollHeight"));
+}
 
  // Mute our video
 const muteUnmute = () => { 

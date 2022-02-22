@@ -37,7 +37,28 @@ video{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
 }
+
+
+.main_video::-webkit-scrollbar{
+    width: 10px;
+}
+
+.main_video::-webkit-scrollbar-thumb{
+    background: rgb(20, 20, 20);
+    transition: 0.3s all ease-in-out;
+    border-radius: 100vw;
+}
+
+.main_video::-webkit-scrollbar-thumb:hover{
+    background: rgb(31, 31, 31);
+}
+
+.main_video::-webkit-scrollbar-track{
+    background: transparent;
+}
+
 
 .main_controls{
     display: flex;
