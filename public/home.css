@@ -4,6 +4,8 @@
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
     background: black;
@@ -11,34 +13,27 @@
     position: relative;
 }
 
-.navLogo{
-    width: 90%;
-    height: 15vh;
-    margin: auto;
+.nav{
+    margin: 0 50px;
+    height: 20vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.navLogo i{
+.nav i{
     font-size: 30px;
-    cursor: pointer;
-    transition: 0.5s all ease;
-}
-
-.navLogo i:hover{
-    font-size: 35px;
+    color: #f04e23;
 }
 
 .row{
     width: 80%;
-    min-height: 85vh;
+    min-height: 80vh;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
 }
 
 .col{
-    margin: 20px 0;
     flex-basis: 50%;
     min-width: 300px;
     height: 100%;
@@ -51,14 +46,102 @@
 }
 
 .textBox h1{
-    font-size: 50px;
-    color: #2d3c4b;
+    font-size: 70px;
+    font-family: 'Barriecito', cursive;
+    color: goldenrod;
 }
 
 .textBox h2{
-    font-size: 25px;
-    font-weight: 100;
-    letter-spacing: 3px;
-    line-height: 40px;
+    font-size: 20px;
+    padding-top: 10px;
+    font-family: 'Amatic SC', cursive;
+    color: #f04e23;
 }
 
+.joinRoom{
+    padding-top: 100px;
+}
+
+.joinButton{
+    display: inline-block;
+    box-sizing: border-box;
+    height: 60px;
+    line-height: 60px;
+    background: #04294f;
+    padding: 0px 20px;
+    border-radius: 999em;
+    text-decoration: none;
+    color: #00aee0;
+    font-size: 15px;
+    vertical-align: bottom;
+    white-space: nowrap;
+    font-family: lato;
+    letter-spacing: 2px;
+    transition: 0.5s all ease;
+    font-weight: 600;
+  }
+  .joinButton:hover{
+    background: #00aee0;
+    color: #04294f;
+  }
+
+
+.joinButton i{
+    padding-right: 8px;
+}
+
+.galleryBox{
+    height: 60%;
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+}
+
+.imgSlider{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.galleryBox img{
+    width: 100%;
+}
+
+
+.imgNav ul{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.imgNav ul li{
+    list-style: none;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.active{
+    color: goldenrod;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .row{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col{
+        padding: 100px 0;
+    }
+
+    .textBox h1{
+        font-size: 50px;
+    }
+
+  }

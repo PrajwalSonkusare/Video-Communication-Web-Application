@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barriecito&family=M+PLUS+1p&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/e54097716f.js" crossorigin="anonymous"></script>
 
@@ -14,33 +16,35 @@
     <title>CONNECT</title>
 </head>
 <body>
-    <!-- <div class="homeMain">
-        <div class="homeHeader">
-            <h1>CONNECT......</h1>
-            <p></p>
-        </div>
-        <div class="joinButton">
-            <a href="room">START MEETING</a>
-        </div>
-    </div> -->
 
     <div class="container">
-        <div class="navLogo">
-            <i class="fa-solid fa-earth-asia"></i>
+        <div class="nav">
+            <i class="fa-solid fa-link"></i>
         </div>
-
 
         <div class="row">
             <div class="col">
                 <div class="textBox">
-                    <h1>Connect</h1>
+                    <h1>CONNECT.....</h1>
                     <h2><b>Premium</b> video meetins.Now <b>free</b> for everyone.</h2>
-                    <a href="room">START MEETING</a>
+                </div>
+                <div class="joinRoom">
+                    <div>
+                        <a class="joinButton" href="room"><i class="fa-solid fa-plus"></i>START MEETING</a>
+                    </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col imgSlider">
                 <div class="galleryBox">
-                    <img src="/assets/worldmap.svg" alt="">
+                    <img id="gallery" src="/images/img1.png" alt="">
+                </div>
+                <div class="imgNav">
+                    <ul>
+                        <li class="btn active"><i class="fa-solid fa-circle"></i></li>
+                        <li class="btn"><i class="fa-solid fa-circle"></i></li>
+                        <li class="btn"><i class="fa-solid fa-circle"></i></li>
+                        <li class="btn"><i class="fa-solid fa-circle"></i></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -50,4 +54,29 @@
     
     
 </body>
+
+<script>
+
+
+    var btn = document.getElementsByClassName ("btn");
+    var gallery = document.getElementById("gallery");
+    var images = new Array(
+        "/images/img1.png",
+        "/images/img2.png",
+        "/images/img3.png",
+        "/images/img4.png"
+    );
+                 
+   for (let i=0; i<btn.length; i++){
+        btn[i].onclick = function()
+        {
+            gallery.src = images [i];
+            let current = document.getElementsByClassName ("active");
+            current[0].className = current[0].className.replace("active", "");
+            this.className += " active";
+        };
+    }
+
+</script>
+
 </html>
