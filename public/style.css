@@ -16,49 +16,46 @@ video{
     object-fit: cover;
 }
 
+
 .main{
     height: 100vh;
-    display: flex;
-}
-
-.main_left{
-    flex: 0.8;
+    width: 100vw;
     display: flex;
     flex-direction: column;
 }
 
-.main_right{
-    flex: 0.2;
-}
-
-.main_video{
-    flex-grow: 1;
-    background-color: black;
+.top{
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: scroll;
+}
+
+.mainLeft{
+    width: 80%;
+    height: 100%;
+    background: #343434;
 }
 
 
-.main_video::-webkit-scrollbar{
-    width: 10px;
-}
 
-.main_video::-webkit-scrollbar-thumb{
-    background: rgb(20, 20, 20);
-    transition: 0.3s all ease-in-out;
-    border-radius: 100vw;
-}
 
-.main_video::-webkit-scrollbar-thumb:hover{
-    background: rgb(31, 31, 31);
-}
 
-.main_video::-webkit-scrollbar-track{
-    background: transparent;
-}
 
+
+
+
+
+
+
+
+
+
+
+.bottom{
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+}
 
 .main_controls{
     display: flex;
@@ -102,74 +99,4 @@ video{
 
 .main_controls_button span{
     font-size: 14px;
-}
-
-.main_right{
-    display: flex;
-    flex-direction: column;
-    background-color: #242324;
-    border-left: 1px solid #3d3d42;
-}
-
-.main_header{
-    display: flex;
-    color: #f5f5f5;
-    text-align: left;
-    align-items: center;
-    padding-left: 40px;
-    padding-top: 20px;
-}
-
-.main_header h1{
-    font-size: 20px;
-}
-
-.main_chat_window{
-    flex-grow: 1;
-    overflow-y: scroll;
-}
-
-.main_chat_window::-webkit-scrollbar{
-    width: 10px;
-}
-
-.main_chat_window::-webkit-scrollbar-thumb{
-    background: rgb(20, 20, 20);
-    transition: 0.3s all ease-in-out;
-    border-radius: 100vw;
-}
-
-.main_chat_window::-webkit-scrollbar-thumb:hover{
-    background: rgb(31, 31, 31);
-}
-
-.main_chat_window::-webkit-scrollbar-track{
-    background: transparent;
-}
-
-.main_message_container{
-    height: 70px;
-    border-top: 1px solid #3d3d42;
-    padding: 22px 12px;
-    display: flex;
-}
-
-.main_message_container input{
-    flex-grow: 1;
-    background-color: transparent;
-    border: none;
-    color: #f5f5f5;
-}
-
-.messages{
-    color: white;
-    list-style: none;
-}
-
-.messages li{
-    padding: 5px 10px;
-}
-
-.unmute, .stop{
-    color: #cc3b33;
 }

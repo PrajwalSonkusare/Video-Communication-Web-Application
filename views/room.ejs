@@ -31,12 +31,34 @@
     
 
     <div class="main">
-        <div class="main_left">
-            <div class="main_video">
-                <div id="video-grid">
-        
+        <div class="top">
+
+            <div class="mainLeft">
+                <div class="mainVideo">
+                    <div id="video-grid">
+            
+                    </div>
                 </div>
             </div>
+
+            <div class="mainRight">
+                <div class="mainHeader">
+                    <h1>In-call messages</h1>
+                </div>
+                <div class="mainChatWindow">
+                    <ul class="messages">
+                    </ul>
+                </div>
+                <div class="mainMessageContainer">
+                    <input type="text" placeholder="Send message from here" id="chat_message">
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="bottom">
             <div class="main_controls">
                 <div class="main_controls_block">
                     <div onclick="muteUnmute()" class="main_controls_button main_mute_button">
@@ -59,20 +81,9 @@
                 </div>
             </div>
         </div>
-        <div class="main_right">
-            <div class="main_header">
-                <h1>In-call messages</h1>
-            </div>
-            <div class="main_chat_window">
-                <ul class="messages">
-
-
-                </ul>
-            </div>
-            <div class="main_message_container">
-                <input type="text" placeholder="Send message from here" id="chat_message">
-            </div>
-        </div>
     </div>
+
+
+
 </body>
 </html>
