@@ -14,6 +14,7 @@
     <script src="/socket.io/socket.io.js" defer></script>
 
     <script src="https://kit.fontawesome.com/e54097716f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0c787478ad.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -42,15 +43,17 @@
             </div>
 
             <div class="mainRight">
-                <div class="mainHeader">
-                    <h1>In-call messages</h1>
-                </div>
-                <div class="mainChatWindow">
-                    <ul class="messages">
-                    </ul>
-                </div>
-                <div class="mainMessageContainer">
-                    <input type="text" placeholder="Send message from here" id="chat_message">
+                <div class="rightContainer">
+                    <div class="mainHeader">
+                        <h1>In-call messages</h1>
+                    </div>
+                    <div class="mainChatWindow">
+                        <ul class="messages">
+                        </ul>
+                    </div>
+                    <div class="mainMessageContainer">
+                        <input type="text" placeholder="Send message from here" id="chat_message">
+                    </div>
                 </div>
             </div>
 
@@ -63,24 +66,21 @@
                 <div class="mainControlsBlock">
                     <div onclick="muteUnmute()" class="mainControlsButton main_mute_button">
                         <i class="fa-solid fa-microphone"></i>
-                        <span>Mute</span>
                     </div>
                     <div onclick="playStop()" class="mainControlsButton main_video_button">
                         <i class="fa-solid fa-video"></i>
-                        <span>Stop Video</span>
                     </div>
                     <div class="mainControlsButton">
                         <i class="fas fa-comment-alt"></i>
-                        <span>Chat</span>
                      </div>
-                </div>
-                <div class="mainControlsBlock">
-                    <div class="mainControlsButton">
-                       <span class="leaveMeeting">Leave Meeting</span>
-                    </div>
+                     <div class="mainControlsButton">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
 
 
