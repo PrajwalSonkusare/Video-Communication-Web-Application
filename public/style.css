@@ -33,11 +33,38 @@ video{
     width: 78%;
     height: 100%;
     background: #000000;
+    overflow-y: scroll;
 }
 
 .mainVideo{
+    height: 100%;
+    width: 100%;
     padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.mainLeft::-webkit-scrollbar{
+    width: 10px;
+}
+
+.mainLeft::-webkit-scrollbar-thumb{
+    background: rgb(20, 20, 20);
+    transition: 0.3s all ease-in-out;
+    border-radius: 100vw;
+}
+
+.mainLeft::-webkit-scrollbar-thumb:hover{
+    background: rgb(31, 31, 31);
+}
+
+.mainLeft::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+
+
 
 
 
@@ -136,6 +163,8 @@ video{
 
 
 
+
+
 .bottom{
     height: 10%;
     width: 100%;
@@ -188,3 +217,5 @@ video{
 .mainControlsButton span{
     font-size: 14px;
 }
+
+  
