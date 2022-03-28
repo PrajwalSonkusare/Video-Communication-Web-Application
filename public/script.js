@@ -8,6 +8,7 @@ const myPeer = new Peer(undefined, {
 })
 
 
+
 let myVideoStream;
 const myVideo = document.createElement('video')
 myVideo.muted = true
@@ -47,8 +48,6 @@ navigator.mediaDevices.getUserMedia({
         $('.messages').append(`<li class="message"><b>user</b><br/>${message}</li>`)
         scrollToBottom()
      })
-
-
 })
 
 socket.on('user-disconnected', userId => {
