@@ -5,6 +5,7 @@ const io = require('socket.io')(server);
 const { v4: uuidV4 } = require('uuid');
 const homeRouter = require('./public/home')
 
+
 const { ExpressPeerServer } = require ('peer');
 const peerServer = ExpressPeerServer(server, {
     debug: true
@@ -16,6 +17,7 @@ app.use(express.static('public'));
 app.use('/peerjs', peerServer);
 
 app.use('/', homeRouter)
+
 
 
 app.get('', (req, res) => {
@@ -50,6 +52,6 @@ io.on('connection', socket => {
 
 
 
-server.listen(process.env.PORT||3030);
+// server.listen(process.env.PORT||3030);
 
-// server.listen(3000);
+server.listen(3000);
