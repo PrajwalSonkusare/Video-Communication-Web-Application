@@ -5,6 +5,8 @@ const io = require('socket.io')(server);
 const { v4: uuidV4 } = require('uuid');
 const homeRouter = require('./public/home')
 
+const leaveRouter = require('./public/leave')
+
 
 const { ExpressPeerServer } = require ('peer');
 const peerServer = ExpressPeerServer(server, {
@@ -18,7 +20,7 @@ app.use('/peerjs', peerServer);
 
 app.use('/', homeRouter)
 
-
+app.use('/:room', leaveRouter)
 
 app.get('', (req, res) => {
     res.render('index')
